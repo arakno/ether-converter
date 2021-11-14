@@ -1,8 +1,13 @@
 import React from 'react';
 
 
-const Button  = ({text}: {text: string})=>{
-    return <button>{text}</button>
+type Props = {
+    text: string,
+    onClick: () => void
+}
+
+const Button  = ({text, ...props}: Props)=>{
+    return <button {...props}>{text}</button>
 }
 
 export default Button 
