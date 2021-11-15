@@ -6,7 +6,7 @@ type Props = {
   value: number
 }
 
-const Header = (props: any) => {
+const Header = (props: Props) => {
 
   const [isOpen, setIsOpen] = useState(false)
   const {value} = props

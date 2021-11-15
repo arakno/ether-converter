@@ -3,16 +3,16 @@ import './App.css';
 import Header from './Header'
 import Body from './Body'
 
-type Props = {
-  value: number,
-  updateMessage: number
+
+type State = {
+  value: number
 }
 
-class App extends Component<any, any> {
-  constructor(props: Props) {
+class App extends Component<{}, State> {
+  constructor(props: {}) {
     super(props)
     this.state = {
-        value: 2
+        value: 1
       }
     this.updateMessage = this.updateMessage.bind(this)
   }
@@ -22,7 +22,6 @@ class App extends Component<any, any> {
     this.setState(() => ({
         value: gwei
     }))
-    return gwei
   }
 
   render() {
@@ -30,7 +29,7 @@ class App extends Component<any, any> {
 
     return (
       <div id="body">
-        <Header props={value} />
+        <Header value={value} />
         <Body updateMessage={this.updateMessage} />
       </div>
     )

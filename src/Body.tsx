@@ -1,15 +1,14 @@
 import React from "react";
 
-type Props = {
-  onChange: () => void,
-  value: number,
-  updateMessage: () => number,
-}
+// type Props = {
+//   onChange: (gwei: number) => number,
+//   value: number,
+//   updateMessage: (gwei: number) => number,
+// }
 
 const Body = (props: any) => {
   return (
     <div id="body">
-      <p>BODY VAL: {props.value}</p>
       <input 
         id="gwei" 
         type="number" 
