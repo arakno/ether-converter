@@ -1,49 +1,36 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import Button from './Button'
 import Panel from './Panel'
 
+type Props = {
+  value: number
+}
 
-class Header extends Component<any, any> {
-  constructor(props: any) {
-    super(props)
-    this.state = {
-        visible: false,
-        value: 1
-      }
-    this.showPanel = this.showPanel.bind(this)
-    this.hidePanel = this.hidePanel.bind(this)
+const Header = (props: any) => {
+
+  const [isOpen, setIsOpen] = useState(false)
+  const {value} = props
+
+  const showPanel = () => {
+    setIsOpen(true)
   }
   
-  updateMessage = (gwei: number) => {
-    console.log(gwei);
-    this.setState(() => ({
-        value: gwei
-    }));
+  const hidePanel = () => {
+    setIsOpen(false)
   }
 
-  showPanel() {
-    this.setState({visible: true})
-  }
-
-  hidePanel() {
-    this.setState({visible: false})
-  }
-
-  render() {
-    const {visible, value} = this.state
-
-    return (
+  return (
       <header className="App-header">
-        {visible ? <Panel value={value} /> : null}
-        <Button onClick={this.showPanel}
-          text="show cenas"
+        <p>VAL: {value}</p>
+        {isOpen && <Panel value={value}/> }
+        <Button onClick={showPanel}
+          text="show panel"
         />
-        <Button onClick={this.hidePanel}
+        <Button onClick={hidePanel}
           text="hide panel"
         />
       </header>
-    )
-  }
+  )
 }
 
 export default Header 
