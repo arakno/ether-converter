@@ -8,31 +8,24 @@ const Panel = ({value, ...props}: Props) => (
           <tbody>
             <tr>
                 <td><strong>wei</strong></td>
-                <td>1 wei</td>
-                <td>{value}</td>
+                <td>{10**9 * value}</td>
             </tr>
             <tr>
                 <td><strong>Kwei (babbage)</strong></td>
-                <td>1e3 wei</td>
-                <td>{value ** 3}</td>
-                {/* 1,000 */}
+                <td>{10**6 * value}</td>
             </tr>
             <tr>
                 <td><strong>Mwei (lovelace)</strong></td>
-                <td>1e6 wei</td>
-                <td>{value ** 6}</td>
-                {/* 1,000,000 */}
+                <td>{10**3 * value}</td>
             </tr>
             <tr>
                 <td><strong>Gwei (shannon)</strong></td>
-                <td>1e9 wei</td>
-                <td>{value ** 9}</td>
-                {/* 1,000,000,000 */}
+                <td>{value}</td>
             </tr>
             <tr>
                 <td><strong>microether (szabo)</strong></td>
                 <td>1e12 wei</td>
-                <td>{value ** 12}</td>
+                <td>{value / 42}</td>
                 {/* 1,000,000,000,000 */}
             </tr>
             <tr>
