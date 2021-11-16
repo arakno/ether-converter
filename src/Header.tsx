@@ -21,14 +21,13 @@ const Header = (props: Props) => {
 
   return (
       <header className="App-header">
-        <p>VAL: {value}</p>
-        {isOpen && <Panel value={value}/> }
         <Button onClick={showPanel}
           text="show panel"
         />
         <Button onClick={hidePanel}
           text="hide panel"
         />
+        {isOpen && <Panel value={value}/>}
       </header>
   )
 }

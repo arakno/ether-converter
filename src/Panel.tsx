@@ -24,21 +24,15 @@ const Panel = ({value, ...props}: Props) => (
             </tr>
             <tr>
                 <td><strong>microether (szabo)</strong></td>
-                <td>1e12 wei</td>
-                <td>{value / 42}</td>
-                {/* 1,000,000,000,000 */}
+                <td>{value * 0.001}</td>
             </tr>
             <tr>
                 <td><strong>milliether (finney)</strong></td>
-                <td>1e15 wei</td>
-                <td>{value ** 15}</td>
-                {/* 1,000,000,000,000,000 */}
+                <td>{value * 0.000001}</td>
             </tr>
             <tr>
                 <td><strong>ether</strong></td>
-                <td>1e18 wei</td>
-                <td>{value ** 18}</td>
-                {/* 1,000,000,000,000,000,000 */}
+                <td>{value * 0.00000001}</td>
             </tr>
         </tbody>
       </table>
