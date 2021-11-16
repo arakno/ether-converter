@@ -18,7 +18,6 @@ class App extends Component<{}, State> {
   }
   
   updateMessage = (gwei: number) => {
-    console.log(gwei);
     this.setState(() => ({
         value: gwei
     }))
@@ -30,7 +29,7 @@ class App extends Component<{}, State> {
     return (
       <div id="body">
         <Header value={value} />
-        <Body updateMessage={this.updateMessage} />
+        <Body updateMessage={this.updateMessage} value={value}/>
       </div>
     )
   }

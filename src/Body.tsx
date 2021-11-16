@@ -1,10 +1,3 @@
-import React from "react";
-
-// type Props = {
-//   onChange: (gwei: number) => number,
-//   value: number,
-//   updateMessage: (gwei: number) => number,
-// }
 
 const Body = (props: any) => {
   return (
@@ -15,7 +8,7 @@ const Body = (props: any) => {
           id="gwei" 
           type="number" 
           placeholder="value" 
-          // value={props.value}
+          value={props.value}
           onChange={(event) => props.updateMessage(event.target.value)}
         />
       </form>

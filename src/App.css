@@ -36,14 +36,14 @@
   background-color: #55acee;
   box-shadow: 0px 5px 0px 0px #3C93D5;
 }
-
 .btn:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
+  transform: translate3d(0px, 5px);
+  -webkit-transform: translate3d(0px, 5px);
   box-shadow: 0px 1px 0px 0px;
 }
 .btn:hover {
   background-color: #6FC6FF;
+  cursor: pointer;
 }
 
 .App-link {
